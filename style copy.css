@@ -1,0 +1,702 @@
+/****** General ***********/
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+  /* max-width: 1440px;
+    margin: auto; */
+}
+
+:root {
+  --main-color: #f3ab26;
+  --main-bg-color: #eed098;
+  --filter-bg-color: #735c5c;
+  --gap: 30px;
+  --red: #f94868;
+  --white: #ffffff;
+  --grey: #f2f2f2;
+}
+
+html,
+body {
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements internes par défaut */
+  height: 100%; /* Fait en sorte qu'ils occupent toute la hauteur */
+  width: 100%; /* Fait en sorte qu'ils occupent toute la largeur */
+  box-sizing: border-box; /* Permet de gérer les marges correctement */
+}
+
+/* body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+} */
+
+main {
+  /* max-width: 1920px;
+  margin: auto; */
+  padding: 4rem 7rem 0;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: auto;
+  background-color: #0f0f0f;
+  width: 100%; /* Utiliser 100% pour que le header prenne toute la largeur */
+  padding: 2rem;
+  height: 60px;
+  z-index: 99;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Assurez-vous que le fond couvre toute la largeur */
+  height: 100%;
+  background-image: url("images/background/ef01c670c1a2065a7e2e9b19b5a21b05 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  display: flex;
+}
+
+.icon_content {
+  display: flex;
+  font-size: 1.5rem;
+  gap: 1rem;
+  color: white;
+
+  margin-right: 9rem;
+}
+
+.search {
+  background-color: #d9d9d9;
+  /* padding: 1.5rem; */
+  width: 324px;
+  border-radius: 0.8rem;
+}
+
+.search h3 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 24.2px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  margin-left: 2rem;
+}
+
+.fi-rr-menu-burger {
+  font-size: 2rem;
+  color: white;
+
+  margin-left: 5rem;
+}
+
+.fi-rr-user {
+  color: white; /* Pour s'assurer qu'elle est visible */
+  font-size: 24px; /* Ajuster la taille */
+  display: inline-block; /* S'assurer qu'elle est rendue */
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* JS CODE */
+.user-menu {
+  display: none; /* Caché par défaut */
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+  width: 200px;
+  flex-direction: column; /* Toujours en colonne */
+  gap: 0.5rem;
+}
+
+.user-menu.visible {
+  display: flex; /* Affiche le menu et le garde en colonne */
+}
+
+.user-menu a {
+  text-decoration: none;
+  color: #000; /* Couleur du texte */
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.user-menu a:hover {
+  background-color: var(--main-color); /* Met en évidence au survol */
+  color: white;
+}
+
+.explorer-menu {
+  display: none; /* Caché par défaut */
+  position: absolute;
+  top: 60px; /* Ajuste en fonction de la hauteur du header */
+  left: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+  flex-direction: column; /* Pour aligner les éléments verticalement */
+  gap: 0.5rem;
+  width: 200px;
+}
+.explorer-menu.visible {
+  display: flex; /* Affiche le menu quand la classe "visible" est ajoutée */
+}
+
+.explorer-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.explorer-menu a:hover {
+  background-color: var(--main-color); /* Change la couleur au survol */
+  color: white;
+}
+
+.explorer-container {
+  position: relative;
+  display: flex;
+  align-items: center; /* Centre verticalement "Explorer" */
+}
+
+#explorer-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem; /* Ajuste selon la taille souhaitée */
+  display: inline-block; /* S'assure que le lien respecte le layout flex */
+}
+
+/******JS FIn******/
+
+#explore-animation {
+  /* margin-top: 6rem; */
+  position: relative;
+  margin-bottom: 9rem;
+  margin-top: 10%;
+}
+
+.background-container {
+  position: relative;
+  z-index: 0; /* Le fond reste derrière le contenu */
+  /* 
+  max-width: 1920px;
+  margin: auto; */
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/background/ef01c670c1a2065a7e2e9b19b5a21b05 1.png"); /* Image de fond */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.03; /* Opacité pour l'image */
+  z-index: -1; /* S'assure que le fond reste derrière */
+}
+
+/* Sections enfants pour qu'elles soient visibles */
+
+#explore-animation h2 {
+  color: #f3ab26;
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30.26px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+#explore-animation h1 {
+  font-family: Inter;
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 91.98px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 73%;
+}
+
+#explore-animation p {
+  width: 45%;
+  color: #868686;
+}
+
+.community {
+  display: flex;
+  gap: 4rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.fi-ss-heart {
+  color: #f94868;
+}
+
+.fi-ss-comments {
+  color: #f94868;
+}
+
+.fi-ss-star {
+  color: #f94868;
+}
+
+.btn {
+  width: 252px;
+  padding: 0.8rem;
+  border-radius: 2rem;
+}
+
+.btn.contact {
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(135deg, #f39c12, #f8d14e);
+  border-radius: 8px;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+  overflow: hidden;
+
+  border-radius: 2rem;
+}
+
+.btn.contact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f8d14e, #f39c12);
+  /* Inverse des couleurs */
+}
+
+.btn h3 {
+  color: white;
+  font-weight: bold;
+}
+
+.btn_black {
+  width: 252px;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: 2px solid black;
+  text-align: center;
+
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn_black:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajout d’une ombre */
+}
+
+.contact {
+  background-color: #f3ab26;
+}
+
+.fi-rr-arrow-right {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact_us {
+  display: flex;
+  align-items: center;
+}
+
+.black {
+  border: 2px solid black;
+}
+
+.btn_content {
+  display: flex;
+  gap: 3rem;
+}
+
+.explore_pics {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#explore-animation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pic_dbz {
+  width: 400px;
+  border-radius: 2rem;
+  height: 870px;
+  object-fit: cover;
+}
+
+.naruto {
+  width: 119px;
+  border-radius: 2rem;
+  height: 870px;
+  object-fit: cover;
+}
+
+.explore_content {
+  margin-top: 7rem;
+}
+
+.kaneki {
+  width: 119px;
+  border-radius: 2rem;
+  height: 870px;
+  object-fit: cover;
+}
+
+.round {
+  width: 100px;
+  height: 100px;
+  background-color: #eed098;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_sect2 {
+  font-size: 2.5rem;
+  color: #cc9123;
+}
+
+/* #info_forum {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+} */
+
+.card_review {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column; /* Organise contenu en colonne */
+  align-items: center; /* Centre le contenu horizontalement */
+  justify-content: center; /* Centre le contenu verticalement */
+}
+
+.first-info {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-info .card_review {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.first-info .card_review:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.second-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.second-info .card_review {
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.second-info .card_review:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container_card_animes img {
+  width: 247px;
+  height: 247px;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+}
+
+.container_card_animes img:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'image */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+  cursor: pointer; /* Change le curseur */
+}
+
+.container_card_animes {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  padding: 1rem;
+}
+
+#gallery h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  display: flex;
+  gap: 6rem;
+}
+
+.subtitle p {
+  width: 25%;
+  color: #696969;
+}
+
+.stars {
+  font-size: 2rem;
+}
+
+.opinion_users {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notice_users {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.round_users {
+  width: 44px;
+  height: 44px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+.name_users {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 6rem;
+}
+
+#main_opinion p {
+  color: #8d8d8d;
+}
+
+#main_opinion h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#join_forum {
+  background-color: #735c5c;
+  height: 500px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 114%; */
+  /* width: 1904px;
+  margin-left: -113px; */
+
+  width: 100vw;
+  position: relative;
+  left: calc(-7rem);
+}
+
+#join_forum h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+
+  margin-bottom: 0;
+  /* margin-top: 4rem; */
+}
+
+#join_forum p {
+  width: 47%;
+  margin: auto;
+
+  color: white;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+
+.btn_start {
+  background-color: #ffffff;
+  border: none;
+  width: 240px;
+  height: 85px;
+  border-radius: 1.2rem;
+  font-size: 1.5rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn_start:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  transform: translateY(-5px); /* Déplacement léger vers le haut */
+}
+
+.read_more {
+  background: none;
+  border: none;
+
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fi-rr-arrow-right {
+  margin-top: 1rem;
+}
+
+.more_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer {
+  background-color: #0f0f0f;
+  width: 100%;
+  height: 400px;
+  position: relative; /* Nécessaire pour positionner l'overlay */
+
+  background-image: url("images/footer/attaque-titans-1-ext1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; /* Assurez-vous que l'image reste derrière le contenu */
+}
+
+footer::after {
+  content: ""; /* Nécessaire pour créer un élément virtuel */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1; /* Positionne l'overlay derrière le contenu */
+}
+
+ul li {
+  font-size: 1.2rem;
+}
+
+ul {
+  color: white;
+  display: inline;
+  list-style-type: none;
+}
+
+h5 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer p {
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 2rem 0;
+}
+
+.block_logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.block_logo img {
+  width: 100px;
+}

@@ -1,0 +1,129 @@
+.banner-container {
+  width: 100%; /* S'assure que le conteneur prend toute la largeur */
+  position: relative;
+}
+
+.banner {
+  width: 100%; /* S'assure que la bannière prend toute la largeur du conteneur */
+  height: 523px;
+  background-color: bisque;
+  background-image: url(images/background/Banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: calc(100% + 14rem);
+  margin-left: -7rem;
+  margin-top: 3rem;
+}
+
+.first_block {
+  background: linear-gradient(90deg, #e181e700 0%, #51085533 100%),
+    linear-gradient(45deg, #1e1f25 0%, #6f758b 100%);
+  width: 100%;
+  height: 70px;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.second_block {
+  display: flex;
+}
+
+.first_block h3 {
+  color: white;
+  font-weight: 500;
+  margin-left: 3rem;
+  font-size: 1.5rem;
+  line-height: 3;
+}
+
+.mini_block {
+  width: 100px;
+  height: 101px;
+  /* background-color: #A1A1A1; */
+  background: linear-gradient(
+    90deg,
+    #ffffff 45%,
+    rgba(161, 161, 161, 0.2) 100%
+  );
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini_block .fi {
+  font-size: 1.8rem;
+}
+
+.large_block {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 1rem;
+  border-bottom: 1px solid #aeaeae;
+}
+
+.mini_round {
+  width: 40px;
+  height: 40px;
+  background-color: #6f758b;
+  border-radius: 50%;
+}
+
+.mini_round img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste l'image à la taille du rond */
+  border-radius: 50%;
+}
+
+.round_content {
+  display: flex;
+}
+
+.stats_info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stats_info h5 {
+  color: black;
+  font-size: 1rem;
+  color: #aca6a6;
+}
+
+.icon_text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title_block h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.fi-rr-users {
+  color: #aca6a6;
+}
+
+.fi-rs-beacon {
+  color: #aca6a6;
+}
+
+.forum_block {
+  margin-bottom: 7rem;
+  margin-top: 4rem;
+}
+
+.title_block a {
+  color: black;
+  padding: 0;
+}

@@ -1,0 +1,126 @@
+.banner-container {
+    width: 100%; /* S'assure que le conteneur prend toute la largeur */
+    position: relative;
+  }
+  
+  .banner {
+    width: 100%; /* S'assure que la bannière prend toute la largeur du conteneur */
+    height: 523px;
+    background-color: bisque;
+    background-image: url(images/a-propos/background_about.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    width: calc(100% + 14rem);
+    margin-left: -7rem;
+    margin-top: 3rem;
+  }
+
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 14rem);
+    margin-left: -7rem;
+    
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur noire avec 50% d'opacité */
+    z-index: 1; /* Place la superposition au-dessus de l'image mais en dessous des autres contenus */
+}
+
+.banner h1 {
+    font-family: Poppins;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 105px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    top: 31%;
+    left: 6%;
+    
+}
+
+.card_about {
+    background-color: #505050;
+    width: 362px;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card_about h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.card_about p {
+    font-size: 0.8rem;
+}
+
+
+
+.card_about_content .fi {
+    font-size: 2rem;
+}
+
+.card_about_large {
+    background-color: #505050;
+    width: 100%;
+    height: 233px;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 2rem;
+}
+
+.card_about_large h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card_about_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.about_content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stat_item {
+    line-height: 0;
+}
+
+.join_us {
+    text-align: center;
+}
+
+.join_us h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+button {
+    background-color: #505050;
+    color: white;
+    width: 400px;
+    height: 70px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}

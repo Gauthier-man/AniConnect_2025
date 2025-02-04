@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S'inscrire</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style3.css" class="css" />
+    <link rel="stylesheet" href="packanimation.css" class="css" />
+    <link rel="stylesheet" href="header_signup.css" class="css" />
+    <script src="script.js" defer></script>
+    <script src="script_pack.js" defer></script>
+    <script src="header_signup.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-chubby/css/uicons-regular-chubby.css"
+    />
+
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css" />
+  </head>
+  <body>
+    <div class="background-container">
+      <header>
+        <!-- <i class="fi fi-rr-menu-burger"></i> -->
+        <a href="index.html">
+          <img src="images\Logo\v4BU2f3hRFmcItcrMaD2Xw-removebg-preview 1.png" alt="logo AniConnect" />
+        </a>
+        <nav class="menu">
+          <div class="explorer-container">
+            <a href="#" id="explorer-link">Explorer</a>
+            <div class="explorer-menu" id="explorer-menu">
+              <a href="forum.html">Forum</a>
+              <a href="#">Nouveautés</a>
+              <a href="#">Tendances</a>
+            </div>
+          </div>
+          <div class="explorer-container">
+            <a href="#" id="browse-link">Parcourir</a>
+            <div class="explorer-menu" id="browse-menu">
+              <a href="#">Animes</a>
+              <a href="#">Mangas</a>
+              <a href="#">Discussions</a>
+            </div>
+          </div>
+          <div class="explorer-container">
+            <a href="#" id="pages-link">Pages</a>
+            <div class="explorer-menu" id="pages-menu">
+              <a href="a_propos.html">A propos</a>
+              <a href="#">Contact</a>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+        </nav>
+        <div class="search"><h3>Recherche...</h3></div>
+        <div class="icon_content">
+          <i class="fi fi-rr-add"></i>
+          <i class="fi fi-rs-bell"></i>
+          <div class="icon-container">
+            <div class="round_profile"></div>
+            <div class="user-menu" id="user-menu">
+              <a href="signup.html">Créer un compte</a>
+              <a href="login.html">Se connecter</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section id="signup_users">
+          <div class="background_log">
+            <canvas id="canv"></canvas>
+            <div class="sky">
+              <div class="clouds">
+                <div class="c1 one"></div>
+                <div class="c1 two"></div>
+                <div class="c1 three"></div>
+                <div class="c1 four"></div>
+                <div class="c2 one"></div>
+                <div class="c2 two"></div>
+                <div class="c2 three"></div>
+                <div class="c2 four"></div>
+              </div>
+            </div>
+            <!-- Le contenu existant de la carte -->
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+              <img src="images\signup\Sukuna_sah.png" alt="ceci est une image" />
+            </div>
+
+            <div class="card_signup" data-aos="zoom-in-down" data-aos-duration="1000">
+              <!-- <h2>AniConnect</h2> -->
+              <h3>Créer un compte</h3>
+              <form action="/submit" method="POST">
+                <div class="form-group">
+                  <input type="name_users" id="name_users" name="name users" placeholder="Nom d'utilisateur" required />
+                  <input type="email" id="email" name="email" placeholder="Adresse e-mail" required />
+                  <input type="password" id="password" name="password" placeholder="Mot de passe" required />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Confirmer le mot de passe"
+                    required
+                  />
+                </div>
+                <!-- <div class="form-group"></div> -->
+                <div class="profile_picture_view">
+                  <label for="photo_profil">Photo de profil:</label>
+                  <div class="users_file">
+                    <input type="file" id="file" name="file" placeholder="Photo de profil" required />
+                  </div>
+                </div>
+                <button type="submit" class="submit-button">Créer un compte</button>
+              </form>
+              <h5>ou s'inscrire avec</h5>
+              <div class="case_content">
+                <div class="short_case">
+                  <i class="fi fi-brands-google"></i>
+                </div>
+                <div class="short_case">
+                  <i class="fi fi-brands-discord"></i>
+                </div>
+                <div class="short_case">
+                  <i class="fi fi-brands-twitter-alt"></i>
+                </div>
+              </div>
+              <!-- <p>
+                En créant un compte, vous acceptez
+                <span>les Conditions de service </span>et la <span>Politique de confidentialité </span>d'AniConnect.
+              </p> -->
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="footer_block">
+        <div class="block_logo">
+          <img src="images\Logo\v4BU2f3hRFmcItcrMaD2Xw-removebg-preview 1.png" alt="logo AniConnect" />
+          <p>© 2024 AniConnect, Inc. All rights reserved.</p>
+        </div>
+        <div>
+          <h5>Liens</h5>
+          <ul>
+            <a href="#">
+              <li>Mentions légales</li>
+            </a>
+            <a href="#">
+              <li>Politique de confidentialité</li>
+            </a>
+            <a href="#">
+              <li>Conditions d'utilisation</li>
+            </a>
+            <a href="#">
+              <li>Nous contacter</li>
+            </a>
+          </ul>
+        </div>
+        <div>
+          <h5>Ressources</h5>
+          <ul>
+            <a href="#">
+              <li>Forum</li>
+            </a>
+            <a href="#">
+              <li>Blog</li>
+            </a>
+            <a href="#">
+              <li>Galerie</li>
+            </a>
+            <a href="#">
+              <li>FAQ</li>
+            </a>
+          </ul>
+        </div>
+        <div>
+          <h5>Rejoignez-nous</h5>
+          <ul>
+            <a href="#">
+              <li>Instagram</li>
+            </a>
+            <a href="#">
+              <li>Twitter</li>
+            </a>
+            <a href="#">
+              <li>Discord</li>
+            </a>
+            <a href="#">
+              <li>Newsletter</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

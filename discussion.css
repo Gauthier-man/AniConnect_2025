@@ -1,0 +1,54 @@
+.profil_picture img {
+  width: initial;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.content_message h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.content_message h4 {
+  margin-top: 0;
+}
+
+.stats {
+  align-items: initial;
+}
+
+.users_name {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.users_name p {
+  margin-bottom: 0;
+}
+
+.answer_users {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.report_users {
+  display: flex;
+  gap: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#message {
+  width: 100%;
+  height: 231px;
+}
+
+button {
+  width: 178px;
+  height: 65px;
+}
