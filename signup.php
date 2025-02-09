@@ -118,10 +118,10 @@
             <div class="card_signup" data-aos="zoom-in-down" data-aos-duration="1000">
               <!-- <h2>AniConnect</h2> -->
               <h3>Créer un compte</h3>
-              <form action="/submit" method="POST">
+              <form action="inscription.php" method="POST">
                 <div class="form-group">
-                  <input type="name_users" id="name_users" name="name users" placeholder="Nom d'utilisateur" required />
-                  <input type="email" id="email" name="email" placeholder="Adresse e-mail" required />
+                  <input type="text" id="name_users" name="name_users" placeholder="Nom d'utilisateur" required />
+                  <input type="text" id="email" name="email" placeholder="Adresse e-mail" required />
                   <input type="password" id="password" name="password" placeholder="Mot de passe" required />
                   <input
                     type="password"
